@@ -296,23 +296,17 @@ networks:
   portainer_agent_network:
     external:
       name: portainer_agent_network
+      
 secrets:
-  discord-bot-token:
-    external: true
-  discord-client-secret:
-    external: true
-  stackoverflow-token:
-    external: true
-  db-connection-string:
-    external: true
-  log-webhook-token:
-    external: true
-  datadog-key:
-    external: true
-  azure-translation-service-key:
-    external: true
-  modix-dev-token:
-    external: true
+  discord-bot-token: { name: "discord-bot-token", external: true }
+  discord-client-secret: { name: "discord-client-secret", external: true }
+  stackoverflow-token: { name: "stackoverflow-token", external: true }
+  db-connection-string: { name: "db-connection-string", external: true }
+  log-webhook-token: { name: "log-webhook-token", external: true }
+  datadog-key: { name: "datadog-key", external: true }
+  azure-translation-service-key: { name: "azure-translation-service-key", external: true }
+  modix-dev-token: { name: "modix-dev-token", external: true }
+  
 volumes:
   pgadmin-data:
   grafana-data:
